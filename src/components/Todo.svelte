@@ -1,5 +1,10 @@
-<script>
-    export let todo;
+<script lang="ts">
+    interface Todo {
+        completed: boolean;
+        text: string;
+        id: string
+    }
+    export let todo: Todo;
     import {deleteTodo, toggleTodoCompleted} from '../stores/todoStore.js';
     
 </script>

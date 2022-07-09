@@ -38,7 +38,6 @@
 	"dependencies": {
 		"@lukeed/uuid": "^2.0.0",
 		"@supabase/supabase-js": "^1.35.4",
-		"react-icons": "^4.4.0",
 		"svelte-color-picker": "^1.0.7"
 	}
 }
