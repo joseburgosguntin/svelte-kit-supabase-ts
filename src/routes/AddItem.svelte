@@ -1,6 +1,13 @@
 <script lang="ts">
     import {HsvPicker} from 'svelte-color-picker';
     import Svg from "../components/Svg.svelte";
+    import {addClosetItem} from '../stores/closetStore';
+    import {user} from '../stores/authStore.js';
+
+    const handleSubmit = () => {
+        console.log($user);
+        addClosetItem(select, itemColor, $user.id)
+    }
 
     interface Rgba {
       detail: {
@@ -36,5 +43,5 @@
       <option value="pants">Pants</option>
     </select>
     <Svg type={select} fill={itemColor}/>
-    <button on:click={() => {console.log({select, itemColor})}}>Button Add</button>
+    <button on:click={handleSubmit}>Button Add</button>
 </div>
