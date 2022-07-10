@@ -51,14 +51,14 @@
   <h1 class="text-2xl font-bold text-center text-gray-800 md:text-3xl">
           Log In
   </h1>
-  <HsvPicker on:colorChange={colorCallback} startColor={"#FBFBFB"}/>
+  <!-- <HsvPicker on:colorChange={colorCallback} startColor={"#FBFBFB"}/>
       <select name="cars" id="cars" on:change={(v) => {select = v.target.options[v.target.options.selectedIndex].__value; console.log(v.target.options[v.target.options.selectedIndex].__value)}}>
         <option value="shirt">Shirt</option>
         <option value="shorts">Shorts</option>
         <option value="pants">Pants</option>
       </select>
       <Svg type={select} fill={itemColor}/>
-      <button on:click={() => {console.log({select, itemColor})}}>Button Add</button>
+      <button on:click={() => {console.log({select, itemColor})}}>Button Add</button> -->
   <p class="text-center mt-2">Sign in via magic link with your email below.</p>
   <form class="form my-6" on:submit|preventDefault={handleLogin}>
           <div class="flex flex-col text-sm mb-2">

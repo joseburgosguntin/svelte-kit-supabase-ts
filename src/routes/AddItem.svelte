@@ -36,7 +36,7 @@
     }
 </script>
 
-<div>
+<div class="flex flex-col text-sm mb-2">
     <h2>Hello World</h2>
     <HsvPicker on:colorChange={setColor} startColor={"#FBFBFB"}/>
     <select name="cars" id="cars" on:change={(v) => {select = v.target.options[v.target.options.selectedIndex].__value; console.log(v.target.options[v.target.options.selectedIndex].__value)}}>
@@ -45,5 +45,5 @@
       <option value="pants">Pants</option>
     </select>
     <Svg type={select} fill={itemColor}/>
-    <button on:click={handleSubmit}>Button Add</button>
+    <button class=" w-full shadow-sm rounded bg-blue-500 hover:bg-blue-600 text-white py-2 px-4" on:click={handleSubmit}>Button Add</button>
 </div>
