@@ -1,10 +1,10 @@
 <script lang="ts">
-    interface CartItem {
+    interface ClosetItem {
         id: string,
         type: string,
         hex_color: string
     }
-    export let closetItem: CartItem;
+    export let closetItem: ClosetItem;
     import { deleteClosetItem } from '../stores/closetStore';
     import Svg from './Svg.svelte';
     
@@ -14,7 +14,7 @@
 } -->
 
 <li class="bg-white flex items-center shadow-sm border border-gray-200 rounded-lg my-2 py-2 px-4">
-    <Svg type={"shirt"} fill={"white"} />
+    <Svg type={closetItem.type} fill={closetItem.hex_color} />
     <span
         class={`flex-1 text-gray-800`}
     >
