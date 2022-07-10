@@ -2,6 +2,8 @@
     import Todo from '../components/Todo.svelte';
     import TodoForm from '../components/TodoForm.svelte';
     import { todos } from '../stores/todoStore.js';
+    import { closet } from "../stores/closetStore"
+    import ClosetItem from '../components/ClosetItem.svelte';
     
 </script>
 
@@ -12,6 +14,9 @@
     <TodoForm/>
     {#each $todos as todo (todo.id)}
       <Todo todo={todo}/>
+    {/each}
+    {#each $closet as closetItem (closetItem.id)}
+      <ClosetItem closetItem={closetItem}/>
     {/each}
 </main>
 
