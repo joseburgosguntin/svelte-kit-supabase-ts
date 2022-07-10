@@ -2,7 +2,7 @@
     interface ClosetItem {
         id: string,
         type: string,
-        hex_color: string
+        color_hex: string
     }
     export let closetItem: ClosetItem;
     import { deleteClosetItem } from '../stores/closetStore';
@@ -14,11 +14,11 @@
 } -->
 
 <li class="bg-white flex items-center shadow-sm border border-gray-200 rounded-lg my-2 py-2 px-4">
-    <Svg type={closetItem.type} fill={closetItem.hex_color} />
+    <Svg type={closetItem.type} fill={closetItem.color_hex} />
     <span
         class={`flex-1 text-gray-800`}
     >
-        {closetItem.hex_color}{" "}{closetItem.type}
+        {closetItem.color_hex}{" "}{closetItem.type}
     </span>
     <button
         type="button"
