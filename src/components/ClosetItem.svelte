@@ -10,6 +10,20 @@
 
     import axios from 'axios';
 
+    let colorName: string;
+    let setColorName = async () => {
+        colorName = await getColorName(closetItem.color_hex)
+    }
+    setColorName()
+
+    // let colorNames = {}
+
+    // let setColorNames = () => {
+    //     closet.forEach(closetItem => {
+    //     colorNames[closetItem.color_hex] = await getColorName(closetItem.color_hex);
+    // });
+    // }
+
   // type User = {
   //   id: number;
   //   email: string;
@@ -58,7 +72,7 @@
     <span
         class={`flex-1 text-gray-800`}
     >
-        {getColorName(closetItem.color_hex)}{" "}{closetItem.type}
+        {colorName}{" "}{closetItem.type}
     </span>
     <button
         type="button"
