@@ -2,27 +2,14 @@
     interface ClosetItem {
         id: string,
         type: string,
-        color_hex: string
+        color_hex: string,
+        color_name: string
     }
     export let closetItem: ClosetItem;
     import { deleteClosetItem } from '../stores/closetStore';
     import Svg from './Svg.svelte';
 
-    import axios from 'axios';
-
-    let colorName: string;
-    let setColorName = async () => {
-        colorName = await getColorName(closetItem.color_hex)
-    }
-    setColorName()
-
-    // let colorNames = {}
-
-    // let setColorNames = () => {
-    //     closet.forEach(closetItem => {
-    //     colorNames[closetItem.color_hex] = await getColorName(closetItem.color_hex);
-    // });
-    // }
+    
 
   // type User = {
   //   id: number;
@@ -33,34 +20,6 @@
   // type GetUsersResponse = {
   //   data: User[];
   // };
-
-  async function getColorName(color_hex: string) {
-    try {
-      const { data, status } = await axios.get<any>(
-        `https://www.thecolorapi.com/id?hex=${color_hex.slice(1, )}`,
-        {
-          headers: {
-            Accept: 'application/json',
-          },
-        },
-      );
-      let jsonResult = data
-      console.log(jsonResult.name.value);
-
-    // 👇️ "response status is: 200"
-      console.log('response status is: ', status);
-
-      return jsonResult.name.value;
-    } catch (error: any) {
-      if (axios.isAxiosError(error)) {
-        console.log('error message: ', error.message);
-        return error.message;
-      } else {
-        console.log('unexpected error: ', error);
-        return 'An unexpected error occurred';
-      }
-    }
-  }
     
 </script>
 <!-- ${
@@ -72,7 +31,7 @@
     <span
         class={`flex-1 text-gray-800`}
     >
-        {colorName}{" "}{closetItem.type}
+        {closetItem.color_name}{" "}{closetItem.type}
     </span>
     <button
         type="button"
