@@ -38,6 +38,7 @@
 	"dependencies": {
 		"@lukeed/uuid": "^2.0.0",
 		"@supabase/supabase-js": "^1.35.4",
+		"axios": "^0.27.2",
 		"svelte-color-picker": "^1.0.7"
 	}
 }
