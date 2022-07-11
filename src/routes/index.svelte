@@ -2,7 +2,8 @@
     import { closet } from "../stores/closetStore"
     import ClosetItemForm from '../components/ClosetItemForm.svelte';
     import ClosetItem from '../components/ClosetItem.svelte';
-    
+    import ClosetItemShuffle from "src/components/ClosetItemShuffle.svelte";
+
 </script>
 
 <main>
@@ -13,6 +14,7 @@
     {#each $closet as closetItem (closetItem.id)}
       <ClosetItem closetItem={closetItem}/>
     {/each}
+    <ClosetItemShuffle closet={$closet}/>
 </main>
 
 

@@ -5,7 +5,7 @@
 
     const handleSubmit = () => {
         console.log($user);
-        addTodo(todo, $user.id)
+        addTodo(todo, $user?.id)
         todo = '';
     }
 
