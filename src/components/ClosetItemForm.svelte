@@ -2,7 +2,7 @@
     import { HsvPicker } from 'svelte-color-picker';
     import Svg from "../components/Svg.svelte";
     import { addClosetItem } from '../stores/closetStore';
-    import { user } from '../stores/authStore.js';
+    import { user } from '../stores/authStore';
 
     const handleSubmit = () => {
         console.log($user);
