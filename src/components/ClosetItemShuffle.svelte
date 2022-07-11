@@ -26,8 +26,8 @@
         randomBottom = bottoms[randomIntFromInterval(0, bottoms.length)];
     }
 </script>
-<div>
-    <button on:click={() => {reShuffle()}} >Shuffle</button>
+<div class="flex flex-col text-sm mb-2">
+    <button class=" w-full shadow-sm rounded bg-blue-500 hover:bg-blue-600 text-white py-2 px-4" on:click={() => {reShuffle()}} >Shuffle</button>
     <Svg type={randomTop.type} fill={randomTop.color_hex}/>
     <Svg type={randomBottom.type} fill={randomBottom.color_hex}/>
 </div>
