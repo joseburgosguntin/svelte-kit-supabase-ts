@@ -2,6 +2,14 @@ import { writable, type Writable } from 'svelte/store';
 import {supabase} from "../supabase.js";
 import axios from 'axios';
 
+interface ClosetItem {
+    id: string,
+    type: string,
+    color_hex: string,
+    color_name: string
+    user_id: string,
+}
+
 async function getColorName(color_hex: string) {
     try {
       const { data, status } = await axios.get<any>(
@@ -30,7 +38,7 @@ async function getColorName(color_hex: string) {
     }
   }
 
-export const closet: Writable<any[]> = writable([]);
+export const closet: Writable<ClosetItem[]> = writable([]);
 
 export const loadCloset = async () => {
     const {data, error} = await supabase.from('closet').select();
