@@ -1,4 +1,3 @@
-import { writable, type Writable } from 'svelte/store';
-import type { User } from "@supabase/supabase-js"
+import { writable } from 'svelte/store';
 
-export const user: Writable<User | undefined | null> = writable(null);
+export const user = writable(false);

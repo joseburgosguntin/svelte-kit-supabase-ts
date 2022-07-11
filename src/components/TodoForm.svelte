@@ -2,13 +2,11 @@
     import {addTodo} from '../stores/todoStore.js';
     import {user} from '../stores/authStore.js';
     let todo = '';
-
     const handleSubmit = () => {
         console.log($user);
-        addTodo(todo, $user?.id)
+        addTodo(todo, $user.id)
         todo = '';
     }
-
 </script>
 
 <form class="form my-6" on:submit|preventDefault={handleSubmit}>

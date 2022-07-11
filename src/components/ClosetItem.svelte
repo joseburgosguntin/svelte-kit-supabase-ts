@@ -1,26 +1,14 @@
 <script lang="ts">
+    import { deleteClosetItem } from '../stores/closetStore';
+    import Svg from './Svg.svelte';
     interface ClosetItem {
         id: string,
         type: string,
         color_hex: string,
         color_name: string
+        user_id: string,
     }
-    export let closetItem: ClosetItem;
-    import { deleteClosetItem } from '../stores/closetStore';
-    import Svg from './Svg.svelte';
-
-    
-
-  // type User = {
-  //   id: number;
-  //   email: string;
-  //   first_name: string;
-  // };
-
-  // type GetUsersResponse = {
-  //   data: User[];
-  // };
-    
+    export let closetItem: ClosetItem;  
 </script>
 <!-- ${
     closetItem.completed ? 'line-through' : ''

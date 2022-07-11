@@ -1,6 +1,5 @@
 <script>
     import {supabase} from "../supabase.js";
-
     const logout = () => {
         console.log("logging out")
         supabase.auth.signOut();
