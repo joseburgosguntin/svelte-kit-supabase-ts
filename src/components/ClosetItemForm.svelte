@@ -9,8 +9,6 @@
         addClosetItem(select, itemColor, $user.id)
     }
 
-    
-
     interface Rgba {
       detail: {
         r: number;
@@ -36,14 +34,37 @@
     }
 </script>
 
-<div class="flex flex-col text-sm mb-2">
-    <h2>Hello World</h2>
-    <HsvPicker on:colorChange={setColor} startColor={"#FBFBFB"}/>
-    <select name="cars" id="cars" on:change={(v) => {select = v.target.options[v.target.options.selectedIndex].__value; console.log(v.target.options[v.target.options.selectedIndex].__value)}}>
+<div class="bg-gray-700 rounded-2xl my-4 text-white font-bold p-4">
+  <div class="">
+    <div class="">
+      1. Select the type
+    <select class="rounded bg-gray-600" name="cars" id="cars" on:change={(v) => {select = v.target.options[v.target.options.selectedIndex].__value; console.log(v.target.options[v.target.options.selectedIndex].__value)}}>
       <option value="shirt">Shirt</option>
       <option value="shorts">Shorts</option>
       <option value="pants">Pants</option>
     </select>
-    <Svg type={select} fill={itemColor}/>
-    <button class=" w-full shadow-sm rounded bg-blue-500 hover:bg-blue-600 text-white py-2 px-4" on:click={handleSubmit}>Button Add</button>
+    </div>
+    <div class="selectAndSvgDiv"><Svg type={select} fill={itemColor}/></div>
+    
+  </div>
+    <div class="">
+      2. Select color
+      <div class="text-black"><HsvPicker class="" on:colorChange={setColor} startColor={"#FBFBFB"}/></div>
+    </div>  
 </div>
+<button class=" w-full shadow-sm rounded bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4" on:click={handleSubmit}>3. Add item to Closet</button>
+
+<style>
+  div {
+    display: grid;
+    flex-flow: row wrap;
+    grid-template-columns: 3fr 2fr;
+  }
+  div div {
+    display: flex;
+    grid-template-columns: 1fr;
+    grid-template-columns: auto;
+    align-content: space-between;
+    flex-direction: column;
+  }
+</style>

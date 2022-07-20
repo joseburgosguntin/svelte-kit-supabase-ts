@@ -1,5 +1,5 @@
 <script lang="ts">
-    export let type: string, bg_fill: string = "white", stroke: string = "black", fill: string = "#6E1414";
+    export let type: string, bg_fill: string = "666666", stroke: string = "black", fill: string = "#6E1414";
     
 </script>
 

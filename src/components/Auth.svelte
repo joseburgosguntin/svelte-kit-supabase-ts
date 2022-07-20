@@ -18,22 +18,22 @@
 	};
 </script>
 
-<h1 class="text-2xl font-bold text-center text-gray-800 md:text-3xl">Log In</h1>
-<p class="text-center mt-2">Sign in via magic link with your email below.</p>
+<h1 class="text-2xl font-bold text-center text-white md:text-3xl">Log In</h1>
+<p class="text-center mt-2 text-gray-300">Sign in via magic link with your email below.</p>
 <form class="form my-6" on:submit|preventDefault={handleLogin}>
 	<div class="flex flex-col text-sm mb-2">
-		<label for="closet" class="font-bold mb-2 text-gray-800 "> Email </label>
+		<label for="closet" class="font-bold mb-2 text-white "> Email </label>
 		<input
 			type="email"
 			name="email"
 			bind:value={email}
 			placeholder="Your email"
-			class="appearance-none shadow-sm border border-gray-200 p-2 focus:outline-none focus:border-gray-500 rounded-lg "
+			class="appearance-none shadow-sm border bg-gray-700 border-gray-600 p-2 focus:outline-none focus:border-gray-500 rounded-lg "
 		/>
 	</div>
 	<button
 		type="submit"
-		class=" w-full shadow-sm rounded bg-blue-500 hover:bg-blue-600 text-white py-2 px-4"
+		class=" w-full shadow-sm rounded font-semibold bg-blue-500 hover:bg-blue-600 text-white py-2 px-4"
 		disabled={loading}
 	>
 		Log In
