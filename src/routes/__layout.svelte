@@ -5,14 +5,14 @@
     import Auth from "../components/Auth.svelte";
     import Navbar from "../components/Navbar.svelte";
     import { loadCloset } from "../stores/closetStore";
-    import AddItem from "./AddItem.svelte"
+	import ClosetItemForm from "./../components/ClosetItemForm.svelte";
 
     user.set(supabase.auth.user())
 
     supabase.auth.onAuthStateChange(( _, session) => {
         user.set(session?.user);
         if(session?.user){
-            loadTodos();
+            loadCloset();
         }
     });
 </script>
@@ -20,7 +20,7 @@
 <div class="container mx-auto my-6 max-w-lg">        
     {#if $user}
         <Navbar/>
-        <AddItem/>
+        <ClosetItemForm/>
         <slot></slot>
     {:else }
         <Auth/>
