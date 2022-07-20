@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
 	import HsvPicker from "./HsvPicker.svelte";
 	import Svg from "../components/Svg.svelte";
 	import { addClosetItem } from "../stores/closetStore";
@@ -53,4 +53,4 @@
 		class=" w-full shadow-sm rounded bg-blue-500 hover:bg-blue-600 text-white py-2 px-4"
 		on:click={handleSubmit}>Button Add</button
 	>
-</div>
+</div> -->

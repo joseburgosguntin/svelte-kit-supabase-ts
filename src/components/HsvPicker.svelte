@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
 	import { onMount, createEventDispatcher } from "svelte";
 
 	export let startColor = "#FF0000";
@@ -651,4 +651,4 @@
 		-ms-user-select: all;
 		user-select: all;
 	}
-</style>
+</style> -->
