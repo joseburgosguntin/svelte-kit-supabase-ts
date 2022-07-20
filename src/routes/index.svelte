@@ -5,7 +5,7 @@
 </script>
 
 <main>
-    <h1 class="text-2xl font-bold text-center text-gray-800 md:text-3xl">
+    <h1 class="text-2xl font-bold text-center text-white md:text-3xl">
         My Closet
     </h1>
     {#each $closet as closetItem (closetItem.id)}

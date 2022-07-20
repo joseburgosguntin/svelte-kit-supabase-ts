@@ -16,7 +16,7 @@
     closetItem.completed ? 'line-through' : ''
 } -->
 
-<li class="bg-white flex items-center shadow-sm border border-gray-200 rounded-lg my-2 py-2 px-4">
+<li class="bg-gray-700 text-white font-bold flex items-center shadow-sm border border-gray-200 rounded-lg my-2 py-2 px-4">
 	<Svg type={closetItem.type} fill={closetItem.color_hex} />
 	<span class={`flex-1 text-gray-800`}>
 		{closetItem.color_name}{" "}{closetItem.type}

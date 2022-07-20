@@ -33,7 +33,9 @@
         itemColor = hexRGB;
     }
 </script>
-
+<h1 class="text-2xl font-bold text-center text-white md:text-3xl">
+  Add item to Closet
+</h1>
 <div class="bg-gray-700 rounded-2xl my-4 text-white font-bold p-4">
   <div class="">
     <div class="">
