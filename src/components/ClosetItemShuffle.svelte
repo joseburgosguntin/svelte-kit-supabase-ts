@@ -1,4 +1,4 @@
-<!-- <script lang="ts">
+<script lang="ts">
 	import Svg from "./Svg.svelte";
 	interface ClosetItem {
 		id: string;
@@ -33,4 +33,4 @@
 	>
 	<Svg type={randomTop.type} fill={randomTop.color_hex} />
 	<Svg type={randomBottom.type} fill={randomBottom.color_hex} />
-</div> -->
+</div>
