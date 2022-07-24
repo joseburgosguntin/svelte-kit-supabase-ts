@@ -1,7 +1,12 @@
-<script lang="ts">
+<!-- <script lang="ts">
 	import Svg from "./Svg.svelte";
-	import type { ClosetItem } from "../stores/closetStore";
-
+	interface ClosetItem {
+		id: string;
+		type: string;
+		color_hex: string;
+		color_name: string;
+		user_id: string;
+	}
 	function randomIntFromInterval(min: number, max: number) {
 		// min and max included
 		return Math.floor(Math.random() * (max - min + 1) + min);
@@ -28,4 +33,4 @@
 	>
 	<Svg type={randomTop.type} fill={randomTop.color_hex} />
 	<Svg type={randomBottom.type} fill={randomBottom.color_hex} />
-</div>
+</div> -->
