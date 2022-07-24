@@ -10,29 +10,9 @@
         addClosetItem(select, hex, $user!.id)
     }
 
-    interface Rgba {
-      detail: {
-        r: number;
-        b: number;
-        g: number;
-        a: number;
-      }
-    }
-
     let hex: string;
     let select: string = "shirt";
 
-    function setColor(rgba: Rgba) {
-        let toHex = (param: number) => {
-            if (param < 16) {
-                return "0" + param.toString(16);
-            }
-            return param.toString(16);
-        }
-        let hexRGB = "#" + toHex(rgba.detail.r) + toHex(rgba.detail.g) + toHex(rgba.detail.b)
-	    console.log(hexRGB);
-        hex = hexRGB;
-    }
 </script>
 <h1 class="text-2xl font-bold text-center text-white md:text-3xl mt-7">
   Add item to Closet

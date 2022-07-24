@@ -1,14 +1,7 @@
 <script lang="ts">
-	import { deleteClosetItem } from "../stores/closetStore";
+	import { deleteClosetItem, type ClosetItem } from "../stores/closetStore";
 	import Svg from "./Svg.svelte";
 
-	interface ClosetItem {
-		id: string;
-		type: string;
-		color_hex: string;
-		color_name: string;
-		user_id: string;
-	}
 	export let closetItem: ClosetItem;
 </script>
 

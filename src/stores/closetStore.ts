@@ -84,7 +84,7 @@ interface GetColorName {
 	_embedded: Record<string, unknown>;
 }
 
-interface ClosetItem {
+export interface ClosetItem {
 	id: string;
 	type: string;
 	color_hex: string;
