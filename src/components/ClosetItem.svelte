@@ -23,7 +23,7 @@
 	</span>
 	<button
 		type="button"
-		class="text-sm bg-red-500 hover:bg-red-600 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"
+		class="text-sm bg-red-500 hover:bg-red-600 font-semibold text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"
 		on:click={() => deleteClosetItem(closetItem.id)}
 	>
 		Delete

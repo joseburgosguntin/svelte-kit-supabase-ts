@@ -28,7 +28,7 @@
 			name="email"
 			bind:value={email}
 			placeholder="Your email"
-			class="appearance-none shadow-sm border bg-gray-700 border-gray-600 p-2 focus:outline-none focus:border-gray-500 rounded-lg "
+			class="appearance-none shadow-sm border text-white bg-gray-700 border-gray-600 p-2 focus:outline-none focus:border-gray-500 rounded-lg "
 		/>
 	</div>
 	<button

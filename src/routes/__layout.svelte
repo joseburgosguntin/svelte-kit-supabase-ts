@@ -1,7 +1,7 @@
-<script>
+<script lang="ts">
     import "../app.css";
     import {supabase} from "../supabase.js";
-    import {user} from "../stores/authStore.js";
+    import {user} from "../stores/authStore";
     import Auth from "../components/Auth.svelte";
     import Navbar from "../components/Navbar.svelte";
     import { loadCloset } from "../stores/closetStore";
@@ -10,7 +10,7 @@
     user.set(supabase.auth.user())
 
     supabase.auth.onAuthStateChange(( _, session) => {
-        user.set(session?.user);
+        user.set(session!.user);
         if(session?.user){
             loadCloset();
         }
